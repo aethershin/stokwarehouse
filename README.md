@@ -10,7 +10,8 @@ CodeIgniter 3.1.13 with Template Mazer v2.0.3
 # Support Me
 
 <a href="https://trakteer.id/aethershin" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-1.png" style="border:0px;height:40px;" alt="Trakteer Saya" height="40"></a>
-Thank you for your support :)
+
+<br/>Thank you for your support :)
 
 ```
 
