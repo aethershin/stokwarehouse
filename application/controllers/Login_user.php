@@ -10,11 +10,9 @@ class Login_user extends CI_Controller{
         parent::__construct();
         $this->load->model('backend/Login_user_model','login_user_model');
         $this->load->model('Site_model','site_model');
-        $this->load->model('Visitor_model','visitor_model');
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->library('form_validation');
-        $this->visitor_model->count_visitor();
         error_reporting(0);
     }
 
@@ -182,7 +180,7 @@ class Login_user extends CI_Controller{
                 
             $token = $this->login_user_model->insertToken($userInfo->user_id);
             $qstring = $this->base64url_encode($token);
-            $url = 'https://stokwarehouse.kayalamasu.com/login_user/reset_password/token/' . $qstring;
+            $url = 'https://stokwarehouse.aethershin.com/login_user/reset_password/token/' . $qstring;
             $link = '<a href="' . $url . '">' . $url . '</a>';
 
             $message = '';
