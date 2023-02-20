@@ -150,7 +150,7 @@ function add_person()
     $('.show_img').empty(); // clear error class
     $('.help-block').empty(); // clear error string
     $('#modal_form').modal('show'); // show bootstrap modal
-    $('.modal-title').text('Tambah Users Admin'); // Set Title to Bootstrap modal title bg-success 
+    $('.modal-title').text('Tambah Users Karyawan'); // Set Title to Bootstrap modal title bg-success 
     $("#level").select2({
         dropdownParent: $("#modal_form"),
         cache: false,
@@ -166,7 +166,7 @@ function edit_person(user_id)
     $('.form-group').removeClass('has-error'); // clear error class
     $('.help-block').empty(); // clear error string
     $('#modal_form').modal('show'); // show bootstrap modal
-    $('.modal-title').text('Edit Users Admin'); // Set title to Bootstrap modal title
+    $('.modal-title').text('Edit Users Karyawan'); // Set title to Bootstrap modal title
     $('.show_edit').text('*Kosongkan Form Gambar dan Password jika tidak ingin menggantinya'); // Set title to Bootstrap modal title
     
     var base_url = '<?php echo base_url(); ?>';
