@@ -23,7 +23,7 @@ class Admin extends CI_Controller{
         $data['form_password'] = form_password('','','name="password_cgtv_122021" id="inputPassword1" class="form-control form-control-xl" placeholder="Password"');
         $site = $this->site_model->get_site_data()->row_array();
         $data['site_title'] = $site['site_title'];
-        $data['title'] = 'Login Admin Warehouse Biopure';
+        $data['title'] = 'Login Admin Stok Warehouse';
         $data['site_icon'] = $site['site_favicon'];
 		$this->load->view('backend/v_login',$data);
         
