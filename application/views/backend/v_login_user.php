@@ -70,7 +70,7 @@
   }
 } 
 </script>
-
+				<input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>" style="display: none">
                 <div class="form-check form-check-lg d-flex align-items-end">
                     <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
                     <label class="form-check-label text-gray-600" for="flexCheckDefault">
