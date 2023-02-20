@@ -1,0 +1,4 @@
+		Success Color : #00b09b, #96c93d
+        Edited Color : #33fff0, #b9fffa
+        Delete Color  : #ff4343, #ff8a8a
+        Template Dark Color : #151521
