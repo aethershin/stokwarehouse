@@ -6,7 +6,13 @@ CodeIgniter 3.1.13 with Template Mazer v2.0.3
 1. Ekstrak File ZIP kedalam folder htdocs.
 2. Import File db_stok_warehouse.sql kedalam localhost/phpmyadmin dengan nama Database db_stok_warehouse
 3. Buka localhost/(nama root masing masing)
+
+# TRAKTEER
+Thank you for your support :)
+teer.id/aethershin
 ```
+
+
 
 ## Demo
 Demo Karyawan
@@ -35,8 +41,6 @@ PHP version 5.6 - 7.4.
 
 * [User guide](https://codeigniter.com/user_guide)
 
-## TRAKTEER
-teer.id/aethershin
 
 ## Reference
 
