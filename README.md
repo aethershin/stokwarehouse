@@ -9,7 +9,9 @@ CodeIgniter 3.1.13 with Template Mazer v2.0.3
 
 # TRAKTEER
 Thank you for your support :)
+<script type='text/javascript' src='https://cdn.trakteer.id/js/embed/trbtn.min.js'></script><script type='text/javascript'>(function(){var trbtnId=trbtn.init('Dukung Saya di Trakteer','#be1e2d','https://trakteer.id/aethershin','https://cdn.trakteer.id/images/embed/trbtn-icon.png','40');trbtn.draw(trbtnId);})();</script>
 teer.id/aethershin
+
 ```
 
 
