@@ -49,13 +49,13 @@ class Konsumen extends CI_Controller{
 			
 			if ($status == 1) {
 				$class = 'lock';
-				$ket = 'Nonaktifkan Customer';
+				$ket = 'Nonaktifkan Konsumen';
 				$icon = 'check';
 				$actket = 'Aktif';
 				$actclass = 'success';
 			} else {
 				$class = 'unlock';
-				$ket = 'Aktifkan Customer';
+				$ket = 'Aktifkan Konsumen';
 				$icon = 'exclamation';
 				$actket = 'Nonaktif';
 				$actclass = 'danger';
