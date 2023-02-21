@@ -45,3 +45,4 @@ PHP version 5.6 - 7.4.
 * [Cirqrcode](https://github.com/dwisetiyadi/CodeIgniter-PHP-QR-Code)
 * [TCPDF](https://github.com/tecnickcom/TCPDF)
 * [PHP Excel](https://github.com/PHPOffice/PHPExcel)
+* [Datatables Server Side] (https://mbahcoding.com/tutorial/php/codeigniter/codeigniter-ajax-crud-using-bootstrap-modals-and-datatable.html)
