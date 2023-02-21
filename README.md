@@ -15,7 +15,6 @@ CodeIgniter 3.1.13 with Template Mazer v2.0.3
 ```
 
 
-
 ## Demo
 Demo Karyawan
 https://stokwarehouse.aethershin.com
@@ -26,7 +25,6 @@ https://stokwarehouse.aethershin.com/admin
 Klik Akun Login diatas form Login Admin, lihat email dan password disitu
 
 ## Server Requirements
-
 PHP version 5.6 - 7.4.
 
 
@@ -38,15 +36,12 @@ PHP version 5.6 - 7.4.
 | jQuery | 3.2.1 | [Website](http://jquery.com) | [Github](https://github.com/jquery/jquery)
 | TCPDF | [Website](https://tcpdf.org/) | [Github](https://github.com/tecnickcom/TCPDF)
 | Cirqrcode | 1 | [Website](https://phpqrcode.sourceforge.net/) | [Github](https://github.com/dwisetiyadi/CodeIgniter-PHP-QR-Code)
-
-## CodeIgniter 3 Documentation
-
-* [User guide](https://codeigniter.com/user_guide)
+| PHP Excel | 1 | [Github](https://github.com/PHPOffice/PHPExcel)
 
 
 ## Reference
-
 * [CodeIgniter](https://github.com/bcit-ci/CodeIgniter)
 * [MazerTemplate](https://github.com/zuramai/mazer)
 * [Cirqrcode](https://github.com/dwisetiyadi/CodeIgniter-PHP-QR-Code)
 * [TCPDF](https://github.com/tecnickcom/TCPDF)
+* [PHP Excel](https://github.com/PHPOffice/PHPExcel)
