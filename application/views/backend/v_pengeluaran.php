@@ -236,7 +236,8 @@ function addpengeluaran()
     fd.append("ket", ket);
     fd.append("biaya", biaya);
     fd.append("picture_1", picture_1);
-
+	fd.append("<?php echo $this->security->get_csrf_token_name(); ?>", '<?php echo
+$this->security->get_csrf_hash(); ?>');
     $('#btnSave').text('saving...'); 
     $('#btnSave').attr('disabled',true); 
     var url;
