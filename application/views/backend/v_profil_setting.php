@@ -192,6 +192,8 @@ data: csfrData
                 fd.append("password", password);
                 fd.append("conf_pass", conf_pass);
                 fd.append("user_photo", user_photo);
+				fd.append("<?php echo $this->security->get_csrf_token_name(); ?>", '<?php echo
+$this->security->get_csrf_hash(); ?>');
               
             if (id == "" || user_name == "" || user_email == "") {
                             Swal.fire({
