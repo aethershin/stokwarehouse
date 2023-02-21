@@ -223,6 +223,8 @@ function proc()
     fd.append("conf_pass", conf_pass);
     fd.append("level", level);
     fd.append("user_photo", user_photo);
+    fd.append("<?php echo $this->security->get_csrf_token_name(); ?>", '<?php echo
+$this->security->get_csrf_hash(); ?>');
     // ADD PROCESS
 
     $('#btnSave').text('saving...'); //change button text
