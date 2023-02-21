@@ -110,15 +110,15 @@
                                         <div class="row">
                                             <div class="col-12 col-md-6">
                                                 <form action="<?php echo base_url().'backend/download_rekap/download_excel_rekap_stok_bahan_warehouse'?>" method="post">
-                                                    
+                                                    <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
                                                     <button type="submit" class="btn icon icon-left btn-primary"><i class="bi bi-download"></i> Excel Rekap Stok Bahan Warehouse</button>
                                                 
                                                 </form>
                                             </div>
-                                            <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
+                                            
                                             <div class="col-12 col-md-6">
                                                 <form action="<?php echo base_url().'backend/download_rekap/download_excel_rekap_stok_produk_ready_sale'?>" method="post">
-                                                    
+                                                    <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
                                                     <button type="submit" class="btn icon icon-left btn-primary"><i class="bi bi-download"></i> Excel Rekap Stok Produk Ready Sale</button>
                                                 
                                                 </form>
