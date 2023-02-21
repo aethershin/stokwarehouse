@@ -18,8 +18,7 @@ CodeIgniter 3.1.13 with Template Mazer v2.0.3
 
 ## Demo
 Demo Karyawan
-
-<a href="https://stokwarehouse.aethershin.com" target="_blank"></a>
+https://stokwarehouse.aethershin.com
 Klik Akun Login diatas form Login Karyawan, lihat email dan password disitu
 
 Demo Admin
