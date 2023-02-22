@@ -179,13 +179,13 @@
     </div>
 <!------- TEMPLATE JS --------->
    
-    <script src="<?php echo base_url().'assets/extensions/apexcharts/apexcharts.min.js'?>"></script>
+    <script language="JavaScript" type="application/javascript" src="<?php echo base_url().'assets/extensions/apexcharts/apexcharts.min.js'?>"></script>
 <!------- TEMPLATE JS --------->
  
 
 
 
-<script>
+<script language="JavaScript" type="application/javascript">
         $(document).ready(function(){
             $('#page-heading').on('click','.download-panduan',function(){
                 var site_url = '<?php echo site_url();?>';
