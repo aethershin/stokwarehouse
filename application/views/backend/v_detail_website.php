@@ -223,6 +223,8 @@ data: csfrData
                 fd.append("alamat_universitas", alamat_universitas);
                 fd.append("user_photo", user_photo);
                 fd.append("img_favicon", img_favicon);
+				fd.append("<?php echo $this->security->get_csrf_token_name(); ?>", '<?php echo
+$this->security->get_csrf_hash(); ?>');
 
             if (id == "" || site_title == "" || email == "" || site_deskripsi == "" || notelp == "" || nama_kontak == "" || facebook == "" || instagram == "" || youtube == "" || telegram == "" || alamat_universitas == "") {
                             Swal.fire({
