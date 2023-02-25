@@ -109,22 +109,35 @@ class Users extends CI_Controller{
 		    	if ($this->upload->do_upload('user_photo')){
 		            $filefotoprofil = $this->upload->data();
 		            $bg_filefotoprofil=$filefotoprofil['file_name'];
+			        $data = array(
+						'user_name' => $this->input->post('nama'),
+						'user_email' => $this->input->post('email'),
+						'user_password' => MD5($this->input->post('password')),
+						'user_level' => $this->input->post('level'),
+						'user_status' => '1',
+						'user_photo' => $bg_filefotoprofil,
+					);
+					$insert = $this->users_model->insert_users($data);
+					if($insert){
+						echo json_encode(array("status" => TRUE));
+					}else{
+						echo json_encode(array("status" => FALSE));
+					}
+		        } else {
+		        	$data = array();
+					$data['error_string'] = array();
+					$data['inputerror'] = array();
+					$data['inputerror'][] = 'user_photo';
+					$data['error_string'][] = 'Format File *jpg,png,jpeg,webp';
+					$data['status'] = FALSE;
+					if($data['status'] === FALSE)
+					{
+						echo json_encode($data);
+						exit();
+					}
 		        }
 
-				$data = array(
-					'user_name' => $this->input->post('nama'),
-					'user_email' => $this->input->post('email'),
-					'user_password' => MD5($this->input->post('password')),
-					'user_level' => $this->input->post('level'),
-					'user_status' => '1',
-					'user_photo' => $bg_filefotoprofil,
-				);
-				$insert = $this->users_model->insert_users($data);
-				if($insert){
-					echo json_encode(array("status" => TRUE));
-				}else{
-					echo json_encode(array("status" => FALSE));
-				}
+				
 			} else {
 				
 
@@ -160,7 +173,17 @@ class Users extends CI_Controller{
 						$config['encrypt_name'] = TRUE;
 					    $this->upload->initialize($config);
 			    		if (!$this->upload->do_upload("user_photo")) {
-				        	echo json_encode(array("status" => FALSE));
+				        	$data = array();
+							$data['error_string'] = array();
+							$data['inputerror'] = array();
+							$data['inputerror'][] = 'user_photo';
+							$data['error_string'][] = 'Format File *jpg,png,jpeg,webp';
+							$data['status'] = FALSE;
+							if($data['status'] === FALSE)
+							{
+								echo json_encode($data);
+								exit();
+							}
 						} else {
 				            $gbr = $this->upload->data();
 			                //Compress Image
