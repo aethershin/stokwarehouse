@@ -419,7 +419,7 @@ class Rekap_nota_transaksi_konsumen extends CI_Controller{
 			$this->load->view('backend/_partials/templatejs');
 			$this->load->view('backend/v_bayar_cicilan',$data);
 		} else {
-			redirect('backend/rekap_transaksi_barang');
+			redirect('backend/rekap_nota_transaksi_konsumen');
 		}
 	}
 	public function get_ajax_list_cicil()
@@ -647,7 +647,7 @@ class Rekap_nota_transaksi_konsumen extends CI_Controller{
 				$this->load->view('backend/_partials/templatejs');
 			$this->load->view('backend/v_detail_transaksi',$data);
 		} else {
-			redirect('backend/rekap_transaksi_barang');
+			redirect('backend/rekap_nota_transaksi_konsumen');
 		}
 	}
 	function detailnota(){
@@ -703,7 +703,7 @@ class Rekap_nota_transaksi_konsumen extends CI_Controller{
 				$this->load->view('backend/_partials/templatejs');
 			$this->load->view('backend/v_detail_nota',$data);
 		} else {
-			redirect('backend/rekap_transaksi_barang');
+			redirect('backend/rekap_nota_transaksi_konsumen');
 		}
 	}
 	public function get_ajax_list_detail()
