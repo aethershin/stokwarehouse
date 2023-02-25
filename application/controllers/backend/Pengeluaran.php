@@ -84,17 +84,16 @@ class Pengeluaran extends CI_Controller{
 	    		if ($this->upload->do_upload('picture_1')){
 		            $filefotobukti = $this->upload->data();
 		            $bg_filefotobukti=$filefotobukti['file_name'];
-		        } 	
-				$biaya = $this->input->post('biaya',TRUE);
-				$ket = $this->input->post('ket',TRUE);
-				$biayashow = "Rp " . number_format($biaya, 0, "", ",");
-				$users = $this->session->userdata('id');
-				$arraysql = array(
-	    			"ket_pengeluaran" => $this->input->post('ket',TRUE),
-	    			"biaya_pengeluaran" => $this->input->post('biaya',TRUE),
-	    			"imgbukti" => $bg_filefotobukti,
-	    			"id_user_pengeluaran" => $users
-				);
+		            $biaya = $this->input->post('biaya',TRUE);
+					$ket = $this->input->post('ket',TRUE);
+					$biayashow = "Rp " . number_format($biaya, 0, "", ",");
+					$users = $this->session->userdata('id');
+					$arraysql = array(
+		    			"ket_pengeluaran" => $this->input->post('ket',TRUE),
+		    			"biaya_pengeluaran" => $this->input->post('biaya',TRUE),
+		    			"imgbukti" => $bg_filefotobukti,
+		    			"id_user_pengeluaran" => $users
+					);
 					$insert = $this->pengeluaran_model->insert_pengeluaran($arraysql);
 					
 					if($insert){
@@ -111,6 +110,21 @@ class Pengeluaran extends CI_Controller{
 					}else{
 						echo json_encode(array("status" => FALSE));
 					}
+		        } else {
+		        	$data = array();
+					$data['error_string'] = array();
+					$data['inputerror'] = array();
+					$data['inputerror'][] = 'picture_1';
+					$data['error_string'][] = 'Format File *jpg,png,jpeg,webp';
+					$data['status'] = FALSE;
+					if($data['status'] === FALSE)
+					{
+						echo json_encode($data);
+						exit();
+					}
+
+		        } 	
+				
 			} else {
 				echo json_encode(array("status" => FALSE));
 			}
@@ -127,7 +141,17 @@ class Pengeluaran extends CI_Controller{
 						$config['encrypt_name'] = TRUE;
 					    $this->upload->initialize($config);
 			    		if (!$this->upload->do_upload("picture_1")) {
-				        	echo json_encode(array("status" => FALSE));
+				        	$data = array();
+							$data['error_string'] = array();
+							$data['inputerror'] = array();
+							$data['inputerror'][] = 'picture_1';
+							$data['error_string'][] = 'Format File *jpg,png,jpeg,webp';
+							$data['status'] = FALSE;
+							if($data['status'] === FALSE)
+							{
+								echo json_encode($data);
+								exit();
+							}
 						} else {
 				            $gbr = $this->upload->data();
 			                //Compress Image
